@@ -22,7 +22,9 @@ body {
         justify-content: center;
         align-items: center;
         grid-row-start: 1;
-
+        .logo-name {
+            color: black;
+        }
         .header-nav {
             width: 98%;
             display: flex;
