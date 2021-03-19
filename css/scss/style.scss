@@ -44,15 +44,15 @@ body {
         .header-title {
             width: 100%;
             text-align: center;
-            padding-top: 2rem;
-            font-size: 2rem;
+            padding-top: 5rem;
+            font-size: 4rem;
+            font-family: $headerfont;
         }
         .serch-alley {
             display: flex;
             height: 90%;
             width: 100%;
             padding-top: 1rem;
-            padding-bottom: 5rem;
             justify-content: center;
             align-items: center;
             div {
