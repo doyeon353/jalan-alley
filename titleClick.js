@@ -1,9 +1,3 @@
-const gangnam = document.getElementById('gangnam');
-const hongdae = document.getElementById('hongdae');
-const hyehwa = document.getElementById('hyehwa');
-const ehwa = document.getElementById('ehwa');
-const ilsan = document.getElementById('ilsan');
-
 function removeShow() {
     const postList = document.querySelectorAll('.post-list');
     postList.forEach(span => {
