@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap");
+* { margin: 0; padding: 0; }
+
+* a { text-decoration: none; }
+
+body { display: -ms-grid; display: grid; -ms-grid-rows: (1fr)[2]; grid-template-rows: repeat(2, 1fr); -ms-grid-columns: auto; grid-template-columns: auto; width: 100%; height: 100vh; background-color: #f7ffe9; }
+
+body header { position: fixed; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-grid-row: 1; grid-row-start: 1; }
+
+body header .logo-name { color: black; }
+
+body header .header-nav { width: 98%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; height: 3rem; font-size: 1.8rem; padding: 1rem 1.5rem 0 1rem; }
+
+body header .header-nav .add-post { font-size: 1.6rem; text-align: center; }
+
+body header .header-nav .add-post a { color: black; }
+
+body header .header-title { width: 100%; text-align: center; padding-top: 5rem; font-size: 4rem; font-family: "Sunflower", sans-serif; }
+
+body header .serch-alley { display: -webkit-box; display: -ms-flexbox; display: flex; height: 90%; width: 100%; padding-top: 1rem; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+body header .serch-alley div { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 70%; text-align: center; }
+
+body header .serch-alley div i { position: absolute; left: 2rem; padding-right: 1.5rem; }
+
+body header .serch-alley div * { font-size: 2rem; }
+
+body header .title-list { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; -ms-flex-pack: distribute; justify-content: space-around; margin-top: 50px; list-style: none; }
+
+body header .title-list li { border: 1px solid black; padding: 10px; width: 5rem; text-align: center; cursor: pointer; }
+
+body .post-appear { position: relative; z-index: -1; }
+
+body .post-list { display: none; margin-top: 20rem; -ms-grid-row: 2; grid-row-start: 2; width: 100%; height: 100%; }
+
+body .post-list.show { display: block; -webkit-animation: opacity 1s ease-in-out; animation: opacity 1s ease-in-out; position: absolute; top: 0; }
+
+@-webkit-keyframes opacity { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+@keyframes opacity { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+
+body .post-list.remove { display: block; -webkit-animation: remove_post 1s ease-in-out; animation: remove_post 1s ease-in-out; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; cursor: default; }
+
+@-webkit-keyframes remove_post { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+
+@keyframes remove_post { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+
+body .post-list .post-title { display: block; font-size: 1.6rem; font-family: "Noto Sans KR", sans-serif; margin: 0 170px; margin-bottom: 36px; }
+
+body .post-list ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; list-style: none; padding-bottom: 2.5rem; }
+
+body .post-list .imagesize { width: 40rem; height: 20rem; }
+
+body .post-list .imagesize:nth-child(1) { margin: 0 1.5rem; }
+/*# sourceMappingURL=style.css.map */

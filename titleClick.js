@@ -1,46 +1,60 @@
-const liPost1 = document.getElementById('lipost-1');
-const liPost2 = document.getElementById('lipost-2');
-const liPost3 = document.getElementById('lipost-3');
-const liPost4 = document.getElementById('lipost-4');
-const liPost5 = document.getElementById('lipost-5');
+const gangnam = document.getElementById('gangnam');
+const hongdae = document.getElementById('hongdae');
+const hyehwa = document.getElementById('hyehwa'); 
+const ehwa = document.getElementById('ehwa');
+const ilsan = document.getElementById('ilsan'); 
 
-const imgArray = ['post-1', 'post-2', 'post-3', 'post-4', 'post-5'];
-
-function toggleEvent(post) {
-    let postImg = document.getElementById(post);
-    if (postImg.classList.contains('remove')) {
-        postImg.classList.remove('remove');
-    }
-    postImg.classList.toggle('show');
-    if (!postImg.classList.contains('show')) {
-        postImg.classList.toggle('remove');
-    }
+function removeShow(){
+    const postList = document.querySelectorAll('.post-list');
+    postList.forEach(span =>{
+        span.classList.remove('show');
+    })
 }
 
-
-
-
-function printPost(event) {
-    const target = event.target;
-    const tarId = target.id;
-    if (tarId === 'lipost-1') {
-        toggleEvent('post-1');
-
-    } else if (tarId === 'lipost-2') {
-        toggleEvent('post-2');
-    } else if (tarId === 'lipost-3') {
-        toggleEvent('post-3');
-    } else if (tarId === 'lipost-4') {
-        toggleEvent('post-4');
-    } else {
-        toggleEvent('post-5');
+function clickEvent(event){
+const targetId = event.target.id;
+if(targetId ==='gangnam'){
+    const gangnamImg =document.getElementById('js-gangnam'); 
+    gangnamImg.classList.toggle('show');
+    if(gangnamImg.classList.contains('show')){
+        removeShow();
+        gangnamImg.classList.toggle('show');
     }
-
+    
+}else if(targetId ==='hongdae'){
+    const hongdaeImg =document.getElementById('js-hongdae') 
+    hongdaeImg.classList.toggle('show');
+    if(hongdaeImg.classList.contains('show')){
+        removeShow();
+        hongdaeImg.classList.toggle('show');
+    }
+}else if(targetId ==='hyehwa'){
+    const hyehwaImg =document.getElementById('js-hyehwa') 
+    hyehwaImg.classList.toggle('show');
+    if(hyehwaImg.classList.contains('show')){
+        removeShow();
+        hyehwaImg.classList.toggle('show');
+    }
+}else if(targetId ==='ehwa'){
+    const ehwaImg =document.getElementById('js-ehwa') 
+    ehwaImg.classList.toggle('show');
+    if(ehwaImg.classList.contains('show')){
+        removeShow();
+        ehwaImg.classList.toggle('show');
+    }
+}else{
+    const ilsanImg =document.getElementById('js-ilsan') 
+    ilsanImg.classList.toggle('show');
+    if(ilsanImg.classList.contains('show')){
+        removeShow();
+        ilsanImg.classList.toggle('show');
+    }
 }
-
-liPost1.addEventListener('click', printPost);
-liPost2.addEventListener('click', printPost);
-liPost3.addEventListener('click', printPost);
-liPost4.addEventListener('click', printPost);
-liPost5.addEventListener('click', printPost);
-
+}
+function init(){
+    const  titleClick = document.querySelectorAll('.js-title-click'); 
+for(const title of titleClick){
+    title.addEventListener('click',clickEvent);
+}
+}
+init();
