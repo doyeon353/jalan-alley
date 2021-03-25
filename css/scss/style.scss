@@ -9,9 +9,6 @@
     }
 }
 body {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: auto;
     width: 100%;
     height: 100vh;
     background-color: $bodybg;
@@ -23,6 +20,7 @@ body {
         justify-content: center;
         align-items: center;
         grid-row-start: 1;
+        
         .logo-name {
             color: black;
         }
@@ -90,7 +88,7 @@ body {
     }
     .post-appear {
         position: relative;
-        z-index: -1;
+        z-index: 2;
     }
 
     .post-list {
